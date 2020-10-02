@@ -1,0 +1,29 @@
+.shopping-cart {
+  &:after {
+    @include bubbles-after;
+  }
+
+  &:before {
+    @include bubbles-before;
+  }
+  .empty {
+    height: 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url(../../images/svgs/empty-cart.svg);
+
+    @media (min-width: $media-sm) {
+      background-size: 75%;
+    }
+
+    @media (min-width: $media-lg) {
+      background-size: 50%;
+    }
+  }
+  .card {
+    .fa-trash-alt {
+      color: $warning;
+    }
+  }
+}

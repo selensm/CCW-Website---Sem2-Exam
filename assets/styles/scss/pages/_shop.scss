@@ -1,0 +1,24 @@
+.shop {
+  &:after {
+    @include bubbles-after;
+  }
+
+  &:before {
+    @include bubbles-before;
+  }
+  main {
+    padding: 4rem 0;
+  }
+
+  &__section {
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .headline {
+    margin-left: 15px;
+    // margin-right: -45px;
+    // box-sizing: content-box;
+  }
+}

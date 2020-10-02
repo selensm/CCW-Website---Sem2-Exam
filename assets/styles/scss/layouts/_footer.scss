@@ -1,0 +1,42 @@
+.footer {
+  padding: 4rem 0;
+  background-color: $white;
+
+  .text-input__input {
+    @media (min-width: $media-xl) {
+      width: 65%;
+    }
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__section {
+    ul {
+      @include list-clear;
+    }
+  }
+
+  &__icons-container {
+    // margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: $h1 * 1.5;
+
+    img {
+      max-height: 40px;
+      margin: $padding-sm;
+    }
+
+    i {
+      margin: $padding-sm;
+      margin-top: 4rem;
+      font-size: 4rem;
+    }
+  }
+}

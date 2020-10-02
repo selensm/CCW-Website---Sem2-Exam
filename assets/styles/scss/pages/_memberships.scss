@@ -1,0 +1,209 @@
+.main-memberships {
+  &:after {
+    @include bubbles-after;
+  }
+
+  &:before {
+    @include bubbles-before;
+  }
+
+  // margin-top: 4rem;
+
+  @media (min-width: $media-sm) {
+  }
+
+  @media (min-width: $media-md) {
+  }
+
+  @media (min-width: $media-lg) {
+  }
+
+  @media (min-width: $media-xl) {
+    // margin-top: 12rem;
+  }
+
+  &__intro {
+    &__banner {
+      padding: 4rem 0 0 0;
+
+      @media (min-width: $media-sm) {
+      }
+
+      @media (min-width: $media-md) {
+      }
+
+      @media (min-width: $media-lg) {
+      }
+
+      @media (min-width: $media-xl) {
+        padding: 4rem 0;
+      }
+
+      &-message {
+        h1 {
+          font-size: 2.3rem;
+
+          @media (min-width: $media-sm) {
+            font-size: 2.6rem;
+          }
+
+          @media (min-width: $media-md) {
+          }
+
+          @media (min-width: $media-lg) {
+          }
+
+          @media (min-width: $media-xl) {
+            font-size: 4rem;
+          }
+        }
+      }
+
+      &-image {
+        background-image: url(../../images/photos/membership-image.jpg);
+        @include bckg-img;
+        padding-top: 74.25%;
+
+        @media (min-width: $media-sm) {
+        }
+
+        @media (min-width: $media-md) {
+          padding-top: 42.25%;
+        }
+
+        @media (min-width: $media-lg) {
+          padding-top: 32.25%;
+        }
+
+        @media (min-width: $media-xl) {
+          padding-top: 44.25%;
+        }
+      }
+    }
+
+    &__benefits {
+      padding: 2rem 0;
+      background-color: $white;
+
+      h4 {
+        display: inline-block;
+        border-bottom: 3px solid $primary-dark;
+      }
+    }
+  }
+
+  &__memberships {
+    padding: 4rem 0 8rem 0;
+
+    &__cards {
+      overflow-x: auto;
+      overflow-y: none;
+    }
+
+    &__table {
+      padding: auto 0;
+      table {
+        padding: 0;
+        @include drop-shadow-light-sm;
+        @include border-round-lg;
+
+        tr:nth-child(odd) {
+          background-color: $white;
+        }
+
+        tr:nth-child(even) {
+          background-color: $background-light;
+        }
+
+        .heading {
+          padding: 1.6rem 0;
+          text-align: center;
+
+          @media (min-width: $media-lg) {
+            padding: 1.6rem 0 0 1.6rem;
+            text-align: left;
+          }
+
+          @media (min-width: $media-xl) {
+          }
+        }
+
+        .plat-heading,
+        .plat {
+          color: $platinum;
+        }
+
+        .gold-heading,
+        .gold {
+          color: $gold;
+        }
+
+        .silver-heading,
+        .silver {
+          color: $silver;
+        }
+
+        .bronze-heading,
+        .bronze {
+          color: $bronze;
+        }
+
+        .plat,
+        .gold,
+        .silver,
+        .bronze {
+          padding: 1.6rem;
+          text-shadow: 0 3px 10px #c4c4c4;
+          text-align: center;
+          font-size: 2.4rem;
+
+          @media (min-width: $media-sm) {
+          }
+
+          @media (min-width: $media-md) {
+          }
+
+          @media (min-width: $media-lg) {
+          }
+
+          @media (min-width: $media-xl) {
+            padding: 1.6rem;
+            font-size: 3.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__services {
+    padding: 4rem 0;
+    background-color: $background-dark;
+
+    h2 {
+      color: $white;
+      font-size: 2.4rem;
+      @media (min-width: $media-sm) {
+        font-size: 2.6rem;
+      }
+
+      @media (min-width: $media-md) {
+      }
+
+      @media (min-width: $media-lg) {
+      }
+
+      @media (min-width: $media-xl) {
+        font-size: 3.6rem;
+      }
+    }
+
+    &-container {
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+
+    a {
+      color: black;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+.date-picker {
+  // .selected-date {
+  //   width: 100%;
+  //   height: 100%;
+  //   @include flex-center;
+  // }
+
+  #dateFullyAvailable {
+    display: inline-block;
+    padding-right: 4rem;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      margin-right: 2rem;
+      @include drop-shadow-light-sm;
+      @include border-round-sm;
+      background-color: $secondary;
+    }
+  }
+
+  #datePartiallyBooked {
+    display: inline-block;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      margin-right: 2rem;
+      @include drop-shadow-light-sm;
+      @include border-round-sm;
+      background-color: $primary-dark;
+    }
+  }
+
+  .dates {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 3rem;
+
+    @include drop-shadow-light-sm;
+    @include border-round-lg;
+    overflow: hidden;
+
+    -webkit-user-select: none;
+
+    -moz-user-select: none;
+
+    -ms-user-select: none;
+
+    user-select: none;
+    // display: none;
+    display: block;
+    // position: absolute;
+    // top: 100%;
+    left: 0;
+    right: 0;
+    // @include drop-shadow-light-sm;
+    // @include border-round-lg;
+
+    &.active {
+      display: block;
+    }
+
+    .month {
+      @include flex-center;
+      justify-content: center;
+      // padding: $padding-sm;
+
+      background-color: $background-dark;
+      color: $text-light;
+      font-weight: $bold;
+
+      .arrows {
+        // width: 35px;
+        // height: 35px;
+        padding: 2rem;
+        @include flex-center;
+        color: $text-light;
+        cursor: pointer;
+      }
+    }
+  }
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    // grid-row: ;
+    grid-gap: auto;
+    height: auto;
+
+    padding: $padding-md;
+
+    .day {
+      @include flex-center;
+      justify-content: center;
+      // height: 4rem;
+      // width: 4rem;
+      // height: 40px;
+      padding: 25% 0;
+      cursor: pointer;
+
+      &-week {
+        @extend .day;
+        cursor: default;
+      }
+
+      &.selected {
+        @include border-round-sm;
+        @include drop-shadow-light-sm;
+        background-color: $background-dark;
+        color: $text-light;
+      }
+
+      &.unavailable {
+        color: $greyed-out;
+        // background-color: #eee;
+      }
+    }
+  }
+
+  &.invalid {
+    outline: none;
+    border: 1px solid $warning;
+  }
+}

@@ -1,0 +1,73 @@
+// Breakpoints
+
+$media-sm: 576px;
+$media-md: 768px;
+$media-lg: 992px;
+$media-xl: 1200px;
+
+//  Colors
+
+$primary-light: #133657;
+$primary-dark: #55beee;
+$primary-dark-alt: #0d99c2;
+$secondary: #66bf6c;
+$secondary-alt: #309a37;
+
+$background-light: #f9f9f9;
+$background-dark: #133657;
+
+$text-light: #f9f9f9;
+$text-dark: #133657;
+$text-body: #212529;
+
+$warning: #d14444;
+$new: #f6d868;
+$alert: #0d99c2;
+$success: #309a37;
+
+$greyed-out: #999999;
+$greyed-out-dark: #464646;
+$white: #ffffff;
+
+$platinum: #3d6277;
+$gold: #f6d868;
+$silver: #b6b6b6;
+$bronze: #c99274;
+
+// Fonts
+
+$font-primary: "Nunito Sans";
+$font-fallback: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+$bold: 700;
+
+$p: 1.6rem;
+$h6: 2rem;
+$h5: 2.4rem;
+$h4: 2.8rem;
+$h3: 3.2rem;
+$h2: 3.6rem;
+$h1: 4rem;
+
+// Margins & padding
+
+$padding-sm: 1rem 2rem;
+$padding-md: 2rem 4rem;
+$padding-lg: 3rem 6rem;
+
+$button-padding-sm: 1rem 2rem;
+$button-padding-lg: 1.5rem 3rem;
+
+$padding-y-sm: 1rem 0;
+
+// Transitions
+
+$very-fast: 0.2s;
+$fast: 0.3s;
+$medium: 0.5s;
+$slow: 0.7s;
+$very-slow: 1s;
+
+// Images
+
+$logo: url(../../images/svgs/CCW_logo.svg);

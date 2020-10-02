@@ -1,0 +1,150 @@
+@mixin drop-shadow-light-sm {
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+@mixin drop-shadow-light-lg {
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+@mixin drop-shadow-dark-sm {
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+@mixin drop-shadow-dark-lg {
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+@mixin border-round-lg {
+  border-radius: 10px;
+}
+@mixin border-round-sm {
+  border-radius: 5px;
+}
+
+@mixin border-circle {
+  border-radius: 9999px;
+}
+
+@mixin list-clear {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin padding-base {
+  padding: 1rem 2rem;
+}
+
+@mixin padding-main {
+  padding: 0 8rem;
+}
+
+@mixin bckg-img {
+  width: 100%;
+  padding-top: 56.25%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin badge-dot {
+  display: inline-block;
+  @include border-circle;
+  height: 15px;
+  width: 15px;
+  margin: 0.8rem;
+}
+
+@mixin bubbles-before {
+  content: "";
+  background-image: url(../../images/svgs/bubbles.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -o-object-fit: contain;
+  object-fit: contain;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  opacity: 12%;
+
+  min-height: 45%;
+  min-width: 45%;
+  transform: rotateZ(-190deg);
+  z-index: -9999;
+}
+
+@mixin bubbles-after {
+  content: "";
+  background-image: url(../../images/svgs/bubbles.svg);
+  background-repeat: no-repeat;
+
+  background-position: center;
+  background-size: contain;
+  -o-object-fit: contain;
+  object-fit: contain;
+  position: fixed;
+  top: 10%;
+  left: -10%;
+  opacity: 12%;
+  min-height: 60%;
+  min-width: 60%;
+  transform: rotateZ(30deg);
+  z-index: -9999;
+}
+
+@mixin radio-after($size) {
+  content: "";
+  width: $size;
+  height: $size;
+  background-color: $background-dark;
+  @include border-circle;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+@mixin radio-base($size) {
+  width: $size;
+  height: $size;
+  display: inline-block;
+  @include drop-shadow-light-sm;
+  @include border-circle;
+  background-color: $white;
+  position: relative;
+  margin-right: 1rem;
+}
+
+@mixin checkbox-after {
+  content: "";
+  background-image: url(../../../assets/images/svgs/check-24px.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+@mixin checkbox-base {
+  display: inline-block;
+  background-color: $white;
+
+  @include drop-shadow-light-sm;
+  @include border-round-sm;
+  position: relative;
+  margin-right: 1rem;
+}

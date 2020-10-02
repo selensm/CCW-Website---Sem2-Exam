@@ -1,0 +1,124 @@
+.pop-up {
+  &__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($text-dark, 0.5);
+  }
+
+  width: calc(100% - 4rem);
+
+  @media (min-width: $media-md) {
+    width: 75%;
+  }
+
+  @media (min-width: $media-lg) {
+    width: 50%;
+  }
+
+  @media (min-width: $media-xl) {
+    width: 25%;
+  }
+
+  background-color: $white;
+  @include border-round-lg;
+  @include drop-shadow-light-sm;
+  overflow: hidden;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform $very-fast ease-out;
+  padding: $padding-lg;
+
+  position: fixed;
+  top: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+
+  &__close-button {
+    color: $warning !important;
+    text-decoration: underline !important;
+    text-align: right;
+    cursor: pointer;
+  }
+
+  &__title--log-in,
+  &__title--sign-up {
+    text-align: center;
+  }
+
+  &__form-switch {
+    &--log-in {
+      text-align: center;
+      color: $text-dark;
+      margin-top: 3rem;
+    }
+
+    &--sign-up {
+      text-align: center;
+      color: $text-dark;
+      margin-top: 3rem;
+    }
+
+    &-link {
+      text-decoration: underline !important;
+      display: inline;
+      cursor: pointer;
+    }
+  }
+
+  &__button--log-in,
+  &__button--sign-up {
+    width: 100%;
+  }
+
+  &--account-log-in {
+    .pop-up__form-switch--sign-up,
+    .pop-up__title--sign-up,
+    .pop-up__button--sign-up {
+      display: none;
+    }
+  }
+
+  &--account-sign-up {
+    .pop-up__form-switch--log-in,
+    .pop-up__title--log-in,
+    .pop-up__button--log-in {
+      display: none;
+    }
+  }
+
+  &--confirmation {
+    width: calc(100% - 4rem);
+
+    @media (min-width: $media-md) {
+      width: 75%;
+    }
+
+    @media (min-width: $media-lg) {
+      width: 50%;
+    }
+
+    .pop-up__text-container {
+      padding: $padding-sm;
+      @media (min-width: $media-md) {
+        padding: $padding-md;
+      }
+
+      text-align: center;
+    }
+
+    .pop-up__buttons-container {
+      display: flex;
+      justify-content: space-around;
+      padding: $padding-sm;
+      @media (min-width: $media-md) {
+        padding: $padding-md;
+      }
+    }
+  }
+}

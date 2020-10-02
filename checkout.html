@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | CCW</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <!-- Bootstrap grid CSS, from https://getbootstrap.com/, released under the MIT license and is copyright 2018 Twitter -->
+    <link
+      rel="stylesheet"
+      href="assets/libs/bootstrap/css/bootstrap-grid.min.css"
+    />
+    <!-- Normalize, from https://necolas.github.io/normalize.css/, licensed under the MIT license -->
+    <link rel="stylesheet" href="assets/libs/normalize/normalize.css" />
+    <!-- Font Awesome Free CDN, from https://fontawesome.com/, licensed under CC BY 4.0 license -->
+    <script
+      src="https://kit.fontawesome.com/0f43a8f1c0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom styles and scripts -->
+    <link rel="stylesheet" href="assets/styles/css/main.css" />
+    <script src="assets/scripts/main.js" defer></script>
+    <script src="assets/scripts/forms.js" defer></script>
+    <script src="assets/scripts/date-picker.js" defer></script>
+    <script src="assets/scripts/checkout.js" defer></script>
+  </head>
+
+  <body id="checkout">
+    <nav class="nav">
+      <div class="container">
+        <div class="row">
+          <div class="nav__logo-container row col-12 col-lg-3 col-xl-3">
+            <a href="index.html" class="nav__logo col"></a>
+            <div class="hamburger d-xl-none d-lg-none col">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </div>
+          </div>
+
+          <div
+            class="col-12 col-lg-6 col-xl-6 mt-5 mt-lg-0 hidden"
+            id="links-container"
+          >
+            <ul class="nav__links-container">
+              <li class="nav__link"><a href="index.html">Home</a></li>
+              <li class="nav__link">
+                <a href="memberships.html">Memberships</a>
+              </li>
+              <li class="nav__link"><a href="shop.html">Shop</a></li>
+              <li class="nav__link">
+                <a href="company.html">The&nbsp;company</a>
+              </li>
+              <li class="nav__link">
+                <a href="contact.html">Contact&nbsp;us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="nav__buttons col-12 col-lg-3 col-xl-3 my-5 my-lg-0 hidden"
+            id="buttons-container"
+          >
+            <a
+              href="shopping_cart.html"
+              class="button button--base-sm button--primary-light button--filled d-lg-none d-xl-none"
+            >
+              <i
+                class="fas fa-shopping-cart nav__shopping-cart nav__shopping-cart--mobile"
+              ></i
+              >Shopping&nbsp;cart
+            </a>
+            <a href="shopping_cart.html">
+              <i
+                class="fas fa-shopping-cart nav__shopping-cart nav__shopping-cart--desktop d-none d-lg-block"
+                ><span id="totalCartAmountDot"></span
+              ></i>
+            </a>
+            <button
+              class="nav__login button button--base-sm button--primary-light"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="content">
+      <div class="container checkout pt-5">
+        <div class="row">
+          <div class="col-12">
+            <ul class="breadcrumbs breadcrumbs--h6">
+              <li class="breadcrumbs__item">
+                <a href="shopping_cart.html">Your shopping cart</a>
+              </li>
+              <li class="breadcrumbs__item breadcrumbs__item--active">
+                <a>Complete your purchase</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <main class="col-12 col-lg-8 order-1 order-lg-1 checkout__form-steps">
+            <div
+              class="row card process-steps process-steps process-steps--small"
+            >
+              <div class="col-3 process-steps__step" data-step="1">
+                <i class="far fa-calendar"></i>
+                <div class="process-steps__step-text">
+                  <h6 class="process-steps__step-title">
+                    Book your appointment
+                  </h6>
+                </div>
+              </div>
+              <div class="col-3 process-steps__step" data-step="2">
+                <i class="fas fa-user process-steps__step-icon"></i>
+                <div class="process-steps__step-text">
+                  <h6 class="process-steps__step-title">
+                    Personal information
+                  </h6>
+                </div>
+              </div>
+              <div class="col-3 process-steps__step" data-step="3">
+                <i class="fas fa-car"></i>
+                <div class="process-steps__step-text">
+                  <h6 class="process-steps__step-title">Car information</h6>
+                </div>
+              </div>
+              <div class="col-3 process-steps__step" data-step="4">
+                <i class="far fa-credit-card"></i>
+                <div class="process-steps__step-text">
+                  <h6 class="process-steps__step-title">Complete purchase</h6>
+                </div>
+              </div>
+            </div>
+            <form class="row form-step current" data-step="1">
+              <div class="col-12 col-lg-6">
+                <label for="dropdownLocation" class="text-input__label">
+                  Choose a location</label
+                >
+                <div class="dropdown" id="dropdownLocation" data-value="">
+                  <div class="dropdown__title">
+                    Choose a location
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                  <ul class="dropdown__options-container hidden">
+                    <li class="dropdown__option">Aalborg</li>
+                    <li class="dropdown__option">Aarhus</li>
+                  </ul>
+                </div>
+                <div
+                  class="date-picker hidden mt-5"
+                  data-type="checkout"
+                  data-value=""
+                >
+                  <p id="dateFullyAvailable">Fully available date</p>
+                  <p id="datePartiallyBooked">Partially booked date</p>
+                  <div class="dates">
+                    <div class="month">
+                      <div class="arrows prev-mth">
+                        <i class="fas fa-chevron-left"></i>
+                      </div>
+                      <div class="mth"></div>
+                      <div class="arrows next-mth">
+                        <i class="fas fa-chevron-right"></i>
+                      </div>
+                    </div>
+
+                    <div class="days"></div>
+                  </div>
+                </div>
+                <label for="dropdownTime" class="text-input__label hidden mt-5">
+                  Choose a time</label
+                >
+                <div class="dropdown hidden" id="dropdownTime" data-value="">
+                  <div class="dropdown__title">
+                    Choose a time
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                  <ul class="dropdown__options-container hidden">
+                    <li class="dropdown__option">08:00 - 09:00</li>
+                    <li class="dropdown__option">09:00 - 10:00</li>
+                    <li class="dropdown__option">10:15 - 11:15</li>
+                    <li class="dropdown__option">11:15 - 12:15</li>
+                    <li class="dropdown__option">12:45 - 13:45</li>
+                    <li class="dropdown__option">13:45 - 14:45</li>
+                    <li class="dropdown__option">15:00 - 16:00</li>
+                    <li class="dropdown__option">16:00 - 17:00</li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+            <form class="row form-step" data-step="2">
+              <div class="col-12 col-md-6 text-input">
+                <label for="firstName" class="text-input__label"
+                  >First name</label
+                >
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  class="text-input__input"
+                  pattern="[^0-9]+"
+                  required
+                />
+                <i class="fas fa-exclamation invalid"></i>
+              </div>
+              <div class="col-12 col-md-6 text-input">
+                <label for="lastName" class="text-input__label"
+                  >Last name</label
+                >
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  class="text-input__input"
+                  pattern="[^0-9]+"
+                  required
+                />
+                <i class="fas fa-exclamation invalid"></i>
+              </div>
+              <div class="col-12 col-md-6 text-input">
+                <label for="address" class="text-input__label">Address</label>
+                <input
+                  type="text"
+                  name="address"
+                  id="address"
+                  class="text-input__input"
+                  required
+                />
+                <i class="fas fa-exclamation invalid"></i>
+              </div>
+              <div class="col-6 text-input">
+                <label for="postalCode" class="text-input__label"
+                  >Postal code</label
+                >
+                <input
+                  type="text"
+                  name="postalCode"
+                  id="postalCode"
+                  class="text-input__input"
+                  required
+                />
+                <i class="fas fa-exclamation invalid"></i>
+              </div>
+              <div class="col-12 col-md-6 text-input">
+                <label for="city" class="text-input__label">City</label>
+                <input
+                  type="text"
+                  name="city"
+                  id="city"
+                  class="text-input__input"
+                  required
+                />
+                <i class="fas fa-exclamation invalid"></i>
+              </div>
+              <div class="col-12 col-md-6 text-input mr-5">
+                <label for="telephoneNumber" class="text-input__label"
+                  >Telephone number</label
+                >
+                <input
+                  type="tel"
+                  name="telephoneNumber"
+                  id="telephoneNumber"
+                  class="text-input__input"
+                  pattern="[0-9]+"
+                  required
+                />
+                <i class="fas fa-exclamation invalid"></i>
+              </div>
+              <div class="col-12 col-md-6 text-input">
+                <label for="business" class="text-input__label"
+                  >Business (optional)</label
+                >
+                <input
+                  type="text"
+                  name="business"
+                  id="business"
+                  class="text-input__input"
+                />
+                <i class="fas fa-exclamation invalid"></i>
+              </div>
+              <div class="col-6 text-input">
+                <label for="CVR" class="text-input__label"
+                  >CVR (optional)</label
+                >
+                <input
+                  type="text"
+                  name="CVR"
+                  id="CVR"
+                  class="text-input__input"
+                />
+                <i class="fas fa-exclamation invalid"></i>
+              </div>
+            </form>
+            <form class="row form-step" data-step="3">
+              <div class="col-12 col-md-6 text-input mr-5">
+                <label for="licensePlateNumber" class="text-input__label"
+                  >License plate number</label
+                >
+                <input
+                  type="text"
+                  name="licensePlateNumber"
+                  id="licensePlateNumber"
+                  class="text-input__input"
+                  required
+                />
+                <i class="fas fa-exclamation invalid"></i>
+              </div>
+              <div class="col-6 text-input mr-5">
+                <label for="carBrand" class="text-input__label"
+                  >Car brand</label
+                >
+                <input
+                  type="text"
+                  name="carBrand"
+                  id="carBrand"
+                  class="text-input__input"
+                  required
+                />
+                <i class="fas fa-exclamation invalid"></i>
+              </div>
+              <div class="col-6 text-input mr-5">
+                <label for="carModel" class="text-input__label"
+                  >Car model</label
+                >
+                <input
+                  type="text"
+                  name="carModel"
+                  id="carModel"
+                  class="text-input__input"
+                  required
+                />
+                <i class="fas fa-exclamation invalid"></i>
+              </div>
+            </form>
+            <form class="row form-step" data-step="4">
+              <div class="row col-12">
+                <div class="col-12 text-input">
+                  <label for="licensePlateNumber" class="text-input__label"
+                    >Choose a payment method</label
+                  >
+                  <div class="row">
+                    <div class="radio__group col-12 col-md-4">
+                      <input
+                        type="radio"
+                        name="radio-payment"
+                        id="MasterCard"
+                        class="radio__input"
+                        checked
+                        required
+                      />
+
+                      <label for="MasterCard" class="radio__label">
+                        <span class="radio__button--lg"></span>
+                        <span class="radio__button-text">MasterCard</span>
+                      </label>
+                    </div>
+                    <div class="radio__group col-12 col-md-4">
+                      <input
+                        type="radio"
+                        name="radio-payment"
+                        id="Visa"
+                        class="radio__input"
+                      />
+                      <label for="Visa" class="radio__label">
+                        <span class="radio__button--lg"></span>
+                        <span class="radio__button-text">Visa</span>
+                      </label>
+                    </div>
+                    <div class="radio__group col-12 col-md-4">
+                      <input
+                        type="radio"
+                        name="radio-payment"
+                        id="PaySafe"
+                        class="radio__input"
+                      />
+                      <label for="PaySafe" class="radio__label">
+                        <span class="radio__button--lg"></span>
+                        <span class="radio__button-text">PaySafe</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row col-12">
+                <div class="col-12 col-md-4 text-input">
+                  <label for="creditCardNumber" class="text-input__label"
+                    >Credit card number</label
+                  >
+                  <input
+                    type="text"
+                    name="creditCardNumber"
+                    id="creditCardNumber"
+                    class="text-input__input"
+                    required
+                  />
+                  <i class="fas fa-exclamation invalid"></i>
+                </div>
+              </div>
+
+              <div class="row col-12">
+                <div class="col-12 col-md-4 text-input">
+                  <label for="nameOnCreditCard" class="text-input__label"
+                    >Name on credit card</label
+                  >
+                  <input
+                    type="text"
+                    name="nameOnCreditCard"
+                    id="nameOnCreditCard"
+                    class="text-input__input"
+                    required
+                  />
+                  <i class="fas fa-exclamation invalid"></i>
+                </div>
+              </div>
+
+              <div class="row col-12">
+                <div class="col-12 col-md-6 text-input">
+                  <label for="expirationDate" class="text-input__label"
+                    >Expiration date</label
+                  >
+                  <input
+                    type="text"
+                    name="expirationDate"
+                    id="expirationDate"
+                    class="text-input__input col-5 col-md-4 mr-3"
+                    required
+                  />
+                  <i class="fas fa-exclamation invalid"></i>
+                  <h6 class="text-input__slash">/</h6>
+                  <input
+                    type="text"
+                    name="expirationDate2"
+                    id="expirationDate2"
+                    class="text-input__input col-5 col-md-4 ml-3"
+                    required
+                  />
+                  <i class="fas fa-exclamation invalid"></i>
+                </div>
+                <div class="col-6 col-md-3 text-input">
+                  <label for="CVC" class="text-input__label">CVV / CVC</label>
+                  <input
+                    type="text"
+                    name="CVC"
+                    id="CVC"
+                    class="text-input__input col-6 col-md-4"
+                    required
+                  />
+                  <i class="fas fa-exclamation invalid"></i>
+                </div>
+              </div>
+            </form>
+          </main>
+          <aside
+            class="col-12 col-lg-4 order-3 order-lg-2 checkout-card__container"
+          ></aside>
+          <div class="col-12 order-2 order-lg-3 row checkout__buttons">
+            <div class="col-5 col-lg-2">
+              <button
+                class="button button--base-lg button--primary-light"
+                id="buttonBack"
+              >
+                <i class="fas fa-arrow-left icon--left"></i>
+                Back
+              </button>
+            </div>
+            <div class="col-5 col-lg-2">
+              <button
+                class="button button--base-lg button--primary-light button--filled"
+                id="buttonNext"
+                type="submit"
+              >
+                Next
+                <i class="fas fa-arrow-right icon--right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div
+            class="mt-4 mt-lg-0 col-xl-2 order-lg-1 col-lg-3 order-sm-1 col-sm-6 order-1 col-12"
+          >
+            <div class="footer__section">
+              <h6>Opening times</h6>
+              <p>Mon - Sat: 09:00 – 17:00</p>
+              <p>Sunday: Closed</p>
+            </div>
+
+            <div class="footer__section">
+              <h6>Aarhus</h6>
+              <p>Anelystparken 37a</p>
+              <p>8381 Tilst</p>
+            </div>
+
+            <div class="footer__section">
+              <h6>Aalborg</h6>
+              <p>K. Christensens Vej 2D</p>
+              <p>9200 Aalborg</p>
+            </div>
+          </div>
+
+          <div
+            class="mt-4 mt-lg-0 col-xl-4 order-lg-2 col-lg-4 order-sm-3 col-sm-12 order-3 col-12 footer__center"
+          >
+            <h6>Subscribe to our newsletter!</h6>
+            <input
+              type="text"
+              name="newsletter"
+              placeholder="E-mail"
+              id="newsletter"
+              class="text-input__input"
+            />
+            <button
+              class="button button--base-sm button--secondary button--filled"
+            >
+              Subscribe
+            </button>
+            <div class="footer__icons-container">
+              <!-- <h1> -->
+              <a href="https://www.facebook.com/ccwaalborg/"
+                ><i class="fab fa-facebook-square"></i
+              ></a>
+              <a href="https://www.instagram.com/centralcarwash_aps/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/channel/UCL6K9SfbQXlfQC3a4-3K9Gw/featured"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="https://www.linkedin.com/company/central-carwash-aps/"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <!-- </h1> -->
+            </div>
+
+            <h6 class="mt-5">We accept</h6>
+            <div class="footer__icons-container">
+              <img src="assets/images/payment-dankort.png" alt="Dankort" />
+              <img
+                src="assets/images/payment-mastercard.png"
+                alt="MasterCard"
+              />
+              <img src="assets/images/payment-visa.png" alt="Visa" />
+            </div>
+
+            <p class="footer__copyright">All rights reserved &copy; 2020</p>
+          </div>
+
+          <div
+            class="mt-4 mt-lg-0 col-xl-2 order-lg-3 col-lg-3 order-sm-2 col-sm-6 order-2 col-12"
+          >
+            <div class="footer__section">
+              <h6>About CCW</h6>
+              <ul>
+                <li><a href="">Shop</a></li>
+                <li><a href="">Kontakt</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Abonnement og Handelsbetingelser</a></li>
+                <li><a href="">GPDR privacy policy</a></li>
+              </ul>
+            </div>
+
+            <div class="footer__section">
+              <h6>Contact</h6>
+              <p>+45 22 99 40 71</p>
+              <a href="mailto:kontakt@centralcarwash.dk"
+                >kontakt@centralcarwash.dk</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

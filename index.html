@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Central Car Wash is a car wash company based in Aalborg and Aarhus, soon to open in your town as well! Here you can get quality service from professionals in the industry. Central Car Wash offers memberships at low prices and an online platform where you have full control over the services you get."
+    />
+    <title>Home | CCW</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <!-- Bootstrap grid CSS, from https://getbootstrap.com/, released under the MIT license and is copyright 2018 Twitter -->
+    <link
+      rel="stylesheet"
+      href="assets/libs/bootstrap/css/bootstrap-grid.min.css"
+    />
+    <!-- Normalize, from https://necolas.github.io/normalize.css/, licensed under the MIT license -->
+    <link rel="stylesheet" href="assets/libs/normalize/normalize.css" />
+    <!-- Font Awesome Free CDN, from https://fontawesome.com/, licensed under CC BY 4.0 license -->
+    <script
+      src="https://kit.fontawesome.com/0f43a8f1c0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom styles and scripts -->
+    <link rel="stylesheet" href="assets/styles/css/main.css" />
+    <script src="assets/scripts/main.js" defer></script>
+  </head>
+
+  <body id="index">
+    <nav class="nav">
+      <div class="container">
+        <div class="row">
+          <div
+            class="nav__logo-container col-12 col-lg-3 col-xl-3 justify-content-between"
+          >
+            <div class="row">
+              <a href="index.html" class="nav__logo col-6"></a>
+              <div class="nav__hamburger-container d-xl-none d-lg-none col-6">
+                <div class="nav__hamburger">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <span class="line"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-12 col-lg-6 col-xl-6 mt-5 mt-lg-0 hidden"
+            id="links-container"
+          >
+            <ul class="nav__links-container">
+              <li class="nav__link active"><a href="index.html">Home</a></li>
+              <li class="nav__link">
+                <a href="memberships.html">Memberships</a>
+              </li>
+              <li class="nav__link"><a href="shop.html">Shop</a></li>
+              <li class="nav__link">
+                <a href="company.html">The&nbsp;company</a>
+              </li>
+              <li class="nav__link">
+                <a href="contact.html">Contact&nbsp;us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="nav__buttons col-12 col-lg-3 col-xl-3 my-5 my-lg-0 hidden"
+            id="buttons-container"
+          >
+            <a
+              href="shopping_cart.html"
+              class="button button--base-sm button--primary-light button--filled d-lg-none d-xl-none"
+            >
+              <i
+                class="fas fa-shopping-cart nav__shopping-cart nav__shopping-cart--mobile"
+              ></i
+              >Shopping&nbsp;cart
+            </a>
+            <a href="shopping_cart.html">
+              <i
+                class="fas fa-shopping-cart nav__shopping-cart nav__shopping-cart--desktop d-none d-lg-block"
+                ><span id="totalCartAmountDot"></span
+              ></i>
+            </a>
+            <button
+              class="nav__login button button--base-sm button--primary-light"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="main-homepage">
+      <section class="main-homepage__banner">
+        <video class="main-homepage__banner-video" autoplay loop muted>
+          <source src="assets/videos/homepage-banner.mp4" type="video/mp4" />
+        </video>
+        <div class="main-homepage__banner-container">
+          <article
+            class="container main-homepage__banner-text justify-content-center"
+          >
+            <div class="row align-items-end">
+              <div class="row col-12 col-md-7 col-lg-6 mb-4">
+                <h1 class="col-12">
+                  Get your car hand-washed as often as you like.
+                </h1>
+              </div>
+              <div class="row col-12 col-md-7 col-lg-7 d-none d-md-block">
+                <p class="col-10">
+                  By choosing us, you are making sure that your car will receive
+                  the best treatment possible.
+                </p>
+              </div>
+
+              <div class="row col-12 col-md-8 mt-4">
+                <div class="col-12 col-sm-6 col-md-7 col-lg-4 col-xl-3 mb-5">
+                  <a
+                    href="memberships.html"
+                    class="button button--base-lg button--primary-light button--filled"
+                  >
+                    Become&nbsp;a&nbsp;member
+                  </a>
+                </div>
+                <div class="col-12 col-sm-6 col-md-7 col-lg-4 col-xl-3 mb-4">
+                  <a
+                    href="shop.html"
+                    class="button button--base-lg button--secondary button--filled"
+                  >
+                    Start&nbsp;shopping
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="main-homepage__memberships">
+        <div class="container">
+          <div class="row my-4 justify-content-center">
+            <div class="col-12 col-xl-6">
+              <article class="main-homepage__memberships-text">
+                <div>
+                  <h3>Memberships that suit your needs</h3>
+                  <p>
+                    CCW offers a unique set of memberships to ensure the highest
+                    quality service for our customers. By purchasing a
+                    membership, you get unlimited booking and extra care for
+                    your car!
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div
+            class="row flex-nowrap flex-md-wrap my-4 main-homepage__memberships__cards"
+          ></div>
+          <div class="row my-4 justify-content-center">
+            <div>
+              <a
+                href="memberships.html"
+                class="button button--base-lg button--primary-light button--filled"
+              >
+                View&nbsp;all&nbsp;details
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-homepage__company">
+        <article class="main-homepage__company-text justify-content-end py-5">
+          <div class="container">
+            <div class="row justify-content-end">
+              <div class="row col-12 col-md-5 col-lg-5">
+                <h2>We are professionals with a passion for the craft.</h2>
+                <p>
+                  We offer both exterior and interior cleaning so your car can
+                  shine and brave any weather.
+                </p>
+                <!-- <div class="col-6"> -->
+                <a
+                  href="company.html"
+                  class="button button--base-lg button--secondary button--filled mt-4"
+                >
+                  About&nbsp;CCW
+                </a>
+                <!-- </div> -->
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="main-homepage__services">
+        <div class="container">
+          <div class="row my-4 justify-content-center">
+            <div class="col-8">
+              <article class="main-homepage__services-text">
+                <div>
+                  <h2>Not interested in becoming a member?</h2>
+                  <p>
+                    We offer individual services for everyone who doesn't feel
+                    like a membership is right for them.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div
+            class="row flex-nowrap my-4 justify-content-xl-center main-homepage__services__cards"
+          ></div>
+          <div class="row my-2 justify-content-center">
+            <!-- <div class="col-12 col-lg-4 col-xl-4"> -->
+            <a
+              href="shop.html"
+              class="button button--base-lg button--primary-light button--filled"
+            >
+              View&nbsp;all&nbsp;services
+            </a>
+            <!-- </div> -->
+          </div>
+        </div>
+      </section>
+
+      <section class="main-homepage__signup">
+        <div class="container">
+          <div class="row my-5 align-items-center justify-content-between">
+            <div class="col-12 col-lg-5 col-xl-4 order-2 order-lg-1">
+              <article class="main-homepage__signup-text">
+                <div
+                  class="my-2 justify-content-center justify-content-md-start"
+                >
+                  <h3>Access our services wherever you are</h3>
+                  <p>
+                    By creating an account on our platform, you gain total
+                    control of how your car is taken care of and get access to
+                    coupons!
+                  </p>
+                  <div class="row col-12">
+                    <a
+                      class="button button--base-lg button--primary-light button--filled mt-4"
+                      href=""
+                      >Sign&nbsp;up</a
+                    >
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-lg-7 col-xl-6 order-1 order-lg-2">
+              <div class="main-homepage__signup-devices"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-homepage__steps">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-xl-8">
+              <article class="main-homepage__steps-text">
+                <div>
+                  <h3>How does it work?</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="row main-homepage__steps-container my-4">
+            <div
+              class="main-homepage__steps-step col-12 col-sm-6 col-md-3 col-xl-3 hidden"
+            >
+              <i class="fas fa-tags"></i>
+              <p>
+                Choose a service from the shop or select a membership
+              </p>
+            </div>
+            <div
+              class="main-homepage__steps-step col-12 col-sm-6 col-md-3 col-xl-3 hidden"
+            >
+              <i class="fas fa-calendar-check"></i>
+
+              <p>
+                Book a date and time that suits you.
+              </p>
+            </div>
+            <div
+              class="main-homepage__steps-step col-12 col-sm-6 col-md-3 col-xl-3 hidden"
+            >
+              <i class="fas fa-cart-arrow-down"></i>
+              <p>
+                Make an online purchase on our site.
+              </p>
+            </div>
+            <div
+              class="main-homepage__steps-step col-12 col-sm-6 col-md-3 col-xl-3 hidden"
+            >
+              <i class="fas fa-car"></i>
+              <p>
+                Arrive with your car and get the best service ever!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-homepage__testimonials">
+        <div class="container">
+          <div class="row justify-content-center">
+            <article>
+              <h3>Our customers say...</h3>
+            </article>
+          </div>
+          <div
+            class="row flex-nowrap main-homepage__testimonials__cards my-4 justify-content-lg-center"
+          >
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+              <div class="main-homepage__testimonials-avatar gitte"></div>
+              <div class="card">
+                <div class="main-homepage__testimonials-text">
+                  <h5>MIN BIL HAVDE SIN FØRSTE TID I DAG OG…</h5>
+                  <p>
+                    Min bil havde sin første tid i dag og hold op jeg er meget
+                    tilfreds..
+                  </p>
+                  <p>
+                    Selv min mand som ellers var noget skeptisk måtte erkende at
+                    de havde gjort et super fint stykke arbejde..
+                  </p>
+                  <p>
+                    Har allerede bestilt næste tid..
+                  </p>
+                  <h6>Gitte Pihl</h6>
+                  <a
+                    class="trustpilot"
+                    href="https://dk.trustpilot.com/reviews/5bd76be89d37800ae465dd24"
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+              <div class="main-homepage__testimonials-avatar mathias"></div>
+              <div class="card">
+                <div class="main-homepage__testimonials-text">
+                  <h5>FLOT ARBEJDE!</h5>
+                  <p>
+                    Lækkert at kunne efterlade bilen og gå over og handle ind,
+                    imens bilen rengøres og en time efter kommer du tilbage til
+                    en bil der både skinner og dufter af ny bil. Kan varmt
+                    anbefales :-)
+                  </p>
+                  <h6>
+                    Mathias H. Schjøtt
+                  </h6>
+                  <a
+                    class="trustpilot"
+                    href="https://dk.trustpilot.com/reviews/5bcb54b69d378004f020460c"
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+              <div class="main-homepage__testimonials-avatar claus"></div>
+              <div class="card">
+                <div class="main-homepage__testimonials-text">
+                  <h5>TAK FOR EN SUPER GOD VASK OG SUPER SERVICE</h5>
+                  <p>
+                    Tak for en super god vask og super service - de søde
+                    medarbejdere gjorde opmærksom på at mine lædersæder var i
+                    farezonen for at revne på grund af barnesædet - løsningen
+                    var at få en måtte monteret under barnesædet... Tusind tak
+                    for tip og god behandling.
+                  </p>
+                  <h6>Claus Wimmer-Aune</h6>
+                  <a
+                    class="trustpilot"
+                    href="https://dk.trustpilot.com/reviews/5b93770f8c83fd0b58d58038"
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-homepage__media">
+        <div class="container">
+          <div class="row justify-content-center">
+            <article class="main-homepage__media-text">
+              <h3>We are discussed in the following media</h3>
+            </article>
+          </div>
+          <div
+            class="row flex-nowrap main-homepage__media__medias my-4 justify-content-lg-center main-homepage__media-images"
+          >
+            <div class="col-4 col-lg-2 col-xl-2">
+              <div class="migog"></div>
+            </div>
+            <div class="col-4 col-lg-2 col-xl-2">
+              <div class="tv2nord"></div>
+            </div>
+            <div class="col-4 col-lg-2 col-xl-2">
+              <div class="nord24"></div>
+            </div>
+            <div class="col-4 col-lg-2 col-xl-2">
+              <div class="nord"></div>
+            </div>
+            <div class="col-4 col-lg-2 col-xl-2">
+              <div class="aalborgnu"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div
+            class="mt-4 mt-lg-0 col-xl-3 order-lg-1 col-lg-4 order-sm-1 col-sm-6 order-1 col-12"
+          >
+            <div class="footer__section">
+              <h6>Opening times</h6>
+              <p>Mon - Sat: 09:00 – 17:00</p>
+              <p>Sunday: Closed</p>
+            </div>
+
+            <div class="footer__section">
+              <h6>Aarhus</h6>
+              <p>Anelystparken 37a</p>
+              <p>8381 Tilst</p>
+            </div>
+
+            <div class="footer__section">
+              <h6>Aalborg</h6>
+              <p>K. Christensens Vej 2D</p>
+              <p>9200 Aalborg</p>
+            </div>
+          </div>
+
+          <div
+            class="mt-4 mt-lg-0 col-xl-6 order-lg-2 col-lg-4 order-sm-3 col-sm-12 order-3 col-12 footer__center"
+          >
+            <h6>Subscribe to our newsletter!</h6>
+            <input
+              type="text"
+              name="newsletter"
+              placeholder="E-mail"
+              id="newsletter"
+              class="text-input__input"
+            />
+            <button
+              class="button button--base-sm button--secondary button--filled"
+            >
+              Subscribe
+            </button>
+            <div class="footer__icons-container">
+              <!-- <h1> -->
+              <a href="https://www.facebook.com/ccwaalborg/"
+                ><i class="fab fa-facebook-square"></i
+              ></a>
+              <a href="https://www.instagram.com/centralcarwash_aps/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/channel/UCL6K9SfbQXlfQC3a4-3K9Gw/featured"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="https://www.linkedin.com/company/central-carwash-aps/"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <!-- </h1> -->
+            </div>
+
+            <h6 class="mt-5">We accept</h6>
+            <div class="footer__icons-container">
+              <img src="assets/images/payment-dankort.png" alt="Dankort" />
+              <img
+                src="assets/images/payment-mastercard.png"
+                alt="MasterCard"
+              />
+              <img src="assets/images/payment-visa.png" alt="Visa" />
+            </div>
+
+            <p class="footer__copyright">All rights reserved &copy; 2020</p>
+          </div>
+
+          <div
+            class="mt-4 mt-lg-0 col-xl-3 order-lg-3 col-lg-4 order-sm-2 col-sm-6 order-2 col-12"
+          >
+            <div class="footer__section">
+              <h6>About CCW</h6>
+              <ul>
+                <li><a href="">Shop</a></li>
+                <li><a href="">Kontakt</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Abonnement og Handelsbetingelser</a></li>
+                <li><a href="">GPDR privacy policy</a></li>
+              </ul>
+            </div>
+
+            <div class="footer__section">
+              <h6>Contact</h6>
+              <p>+45 22 99 40 71</p>
+              <a href="mailto:kontakt@centralcarwash.dk"
+                >kontakt@centralcarwash.dk</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

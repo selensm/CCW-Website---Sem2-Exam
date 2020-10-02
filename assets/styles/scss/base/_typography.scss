@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 1.6;
+}
+
+p {
+  font-size: $p;
+  margin: $p / 2 0;
+  color: $text-body;
+  @media (min-width: $media-lg) {
+    font-size: $p * 1.125;
+  }
+}
+
+h6 {
+  font-size: $h6;
+  font-weight: $bold;
+  margin: $h6 / 2 0;
+}
+
+h5 {
+  font-size: $h5;
+  font-weight: $bold;
+  margin: $h5 / 2 0;
+}
+
+h4 {
+  font-size: $h4;
+  font-weight: $bold;
+  margin: $h4 / 2 0;
+}
+
+h3 {
+  font-size: $h3;
+  font-weight: $bold;
+  margin: $h3 / 2 0;
+}
+
+h2 {
+  font-size: $h2;
+  font-weight: $bold;
+  margin: $h2 / 2 0;
+}
+
+h1 {
+  font-size: $h1;
+  font-weight: $bold;
+  margin: $h1 / 2 0;
+}
+
+.headline {
+  width: 100%;
+  overflow: hidden;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    display: inline-block;
+    position: relative;
+    margin-left: 15rem;
+    padding: $padding-sm;
+    // margin-right: -45px;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      margin-right: 45px;
+
+      width: 90vw;
+      @include border-circle;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 100%;
+      height: $h4 * 0.5;
+      background-color: $background-dark;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      margin-left: 15px;
+
+      width: 120%;
+      right: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      @include border-circle;
+      height: $h4 * 0.5;
+      background-color: $background-dark;
+    }
+  }
+
+  h1 {
+    &::after {
+      height: $h1 * 0.25;
+    }
+
+    &::before {
+      height: $h1 * 0.25;
+    }
+  }
+
+  h2 {
+    &::after {
+      height: $h2 * 0.25;
+    }
+
+    &::before {
+      height: $h2 * 0.25;
+    }
+  }
+
+  h3 {
+    &::after {
+      height: $h3 * 0.25;
+    }
+
+    &::before {
+      height: $h3 * 0.25;
+    }
+  }
+
+  h4 {
+    &::after {
+      height: $h4 * 0.25;
+    }
+
+    &::before {
+      height: $h4 * 0.25;
+    }
+  }
+
+  h5 {
+    &::after {
+      height: $h5 * 0.25;
+    }
+
+    &::before {
+      height: $h5 * 0.25;
+    }
+  }
+
+  h6 {
+    &::after {
+      height: $h6 * 0.25;
+    }
+
+    &::before {
+      height: $h6 * 0.25;
+    }
+  }
+}

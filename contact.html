@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Central Car Wash is waiting for you in Aalborg and Aarhus, soon coming to other towns! Get in touch with us if you want your car washed and looking brand new!"
+    />
+    <title>Contact us | CCW</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <!-- Bootstrap grid CSS, from https://getbootstrap.com/, released under the MIT license and is copyright 2018 Twitter -->
+    <link
+      rel="stylesheet"
+      href="assets/libs/bootstrap/css/bootstrap-grid.min.css"
+    />
+    <!-- Normalize, from https://necolas.github.io/normalize.css/, licensed under the MIT license -->
+    <link rel="stylesheet" href="assets/libs/normalize/normalize.css" />
+    <!-- Font Awesome Free CDN, from https://fontawesome.com/, licensed under CC BY 4.0 license -->
+    <script
+      src="https://kit.fontawesome.com/0f43a8f1c0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom styles and scripts -->
+    <link rel="stylesheet" href="assets/styles/css/main.css" />
+    <script src="assets/scripts/main.js" defer></script>
+  </head>
+
+  <body id="contact">
+    <nav class="nav">
+      <div class="container">
+        <div class="row">
+          <div
+            class="nav__logo-container col-12 col-lg-3 col-xl-3 justify-content-between"
+          >
+            <div class="row">
+              <a href="index.html" class="nav__logo col-6"></a>
+              <div class="nav__hamburger-container d-xl-none d-lg-none col-6">
+                <div class="nav__hamburger">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <span class="line"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-12 col-lg-6 col-xl-6 mt-5 mt-lg-0 hidden"
+            id="links-container"
+          >
+            <ul class="nav__links-container">
+              <li class="nav__link"><a href="index.html">Home</a></li>
+              <li class="nav__link">
+                <a href="memberships.html">Memberships</a>
+              </li>
+              <li class="nav__link"><a href="shop.html">Shop</a></li>
+              <li class="nav__link">
+                <a href="company.html">The&nbsp;company</a>
+              </li>
+              <li class="nav__link active">
+                <a href="contact.html">Contact&nbsp;us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="nav__buttons col-12 col-lg-3 col-xl-3 my-5 my-lg-0 hidden"
+            id="buttons-container"
+          >
+            <a
+              href="shopping_cart.html"
+              class="button button--base-sm button--primary-light button--filled d-lg-none d-xl-none"
+            >
+              <i
+                class="fas fa-shopping-cart nav__shopping-cart nav__shopping-cart--mobile"
+              ></i
+              >Shopping&nbsp;cart
+            </a>
+            <a href="shopping_cart.html">
+              <i
+                class="fas fa-shopping-cart nav__shopping-cart nav__shopping-cart--desktop d-none d-lg-block"
+                ><span id="totalCartAmountDot"></span
+              ></i>
+            </a>
+            <button
+              class="nav__login button button--base-sm button--primary-light"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="main-contact">
+      <section class="main-contact__address">
+        <div class="container">
+          <div class="row"><h2 class="col-12">Contact us</h2></div>
+          <div class="row">
+            <iframe
+              class="col-12 col-lg-8 col-xl-8"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2172.228492372208!2d9.889978615890227!3d57.01339438090929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464932ee3c320b2b%3A0x21498f741281910e!2sCentral%20Car%20Wash%20ApS!5e0!3m2!1sen!2sdk!4v1591737695985!5m2!1sen!2sdk"
+            ></iframe>
+            <div
+              class="row mt-4 mt-lg-0 col-xl-3 order-lg-1 col-lg-3 order-sm-1 order-1 col-12"
+            >
+              <div class="col-6 col-lg-12 footer__section">
+                <h6>Opening times</h6>
+                <p>Mon - Sat: 09:00 – 17:00</p>
+                <p>Sunday: Closed</p>
+              </div>
+
+              <div class="col-6 col-lg-12 footer__section">
+                <h6>Aarhus</h6>
+                <p>Anelystparken 37a</p>
+                <p>8381 Tilst</p>
+              </div>
+
+              <div class="col-6 col-lg-12 footer__section">
+                <h6>Aalborg</h6>
+                <p>K. Christensens Vej 2D</p>
+                <p>9200 Aalborg</p>
+              </div>
+              <div class="col-6 col-lg-12 footer__section">
+                <h6>Contact</h6>
+                <p>+45 22 99 40 71</p>
+                <a href="mailto:kontakt@centralcarwash.dk"
+                  >kontakt@centralcarwash.dk</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-contact__form">
+        <div class="container">
+          <div class="row">
+            <h2 class="col-12">Any questions? Get in touch with us:</h2>
+          </div>
+          <form action="">
+            <fieldset>
+              <div class="row mt-4">
+                <div class="col-md-6 col-lg-4">
+                  <div class="text-input">
+                    <label for="Name" class="text-input__label">Name</label>
+                    <input
+                      type="text"
+                      name="Name"
+                      id="Name"
+                      class="text-input__input"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="text-input">
+                    <label for="Surname" class="text-input__label"
+                      >Surname</label
+                    >
+                    <input
+                      type="text"
+                      name="Surname"
+                      id="Surname"
+                      class="text-input__input"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-6 col-lg-4">
+                  <div class="text-input">
+                    <label for="eMail" class="text-input__label">E-mail</label>
+                    <input
+                      type="text"
+                      name="eMail"
+                      id="eMail"
+                      class="text-input__input"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="text-input">
+                    <label for="Telephone" class="text-input__label"
+                      >Telephone number(optional)</label
+                    >
+                    <input
+                      type="text"
+                      name="Telephone"
+                      id="Telephone"
+                      class="text-input__input"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-6 col-lg-4">
+                  <div class="text-input">
+                    <label for="Subject" class="text-input__label"
+                      >Subject</label
+                    >
+                    <input
+                      type="text"
+                      name="Subject"
+                      id="Subject"
+                      class="text-input__input"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4">
+                <div class="col-md-6">
+                  <div class="text-input">
+                    <label for="Message" class="text-input__label"
+                      >Your Message</label
+                    >
+                    <textarea id="Message" class="text-input__input"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-2">
+                  <button
+                    class="button button--base-lg button--secondary button--filled"
+                  >
+                    Send
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div
+            class="mt-4 mt-lg-0 col-xl-2 order-lg-1 col-lg-3 order-sm-1 col-sm-6 order-1 col-12"
+          >
+            <div class="footer__section">
+              <h6>Opening times</h6>
+              <p>Mon - Sat: 09:00 – 17:00</p>
+              <p>Sunday: Closed</p>
+            </div>
+
+            <div class="footer__section">
+              <h6>Aarhus</h6>
+              <p>Anelystparken 37a</p>
+              <p>8381 Tilst</p>
+            </div>
+
+            <div class="footer__section">
+              <h6>Aalborg</h6>
+              <p>K. Christensens Vej 2D</p>
+              <p>9200 Aalborg</p>
+            </div>
+          </div>
+
+          <div
+            class="mt-4 mt-lg-0 col-xl-4 order-lg-2 col-lg-4 order-sm-3 col-sm-12 order-3 col-12 footer__center"
+          >
+            <h6>Subscribe to our newsletter!</h6>
+            <input
+              type="text"
+              name="newsletter"
+              placeholder="E-mail"
+              id="newsletter"
+              class="text-input__input"
+            />
+            <button
+              class="button button--base-sm button--secondary button--filled"
+            >
+              Subscribe
+            </button>
+            <div class="footer__icons-container">
+              <!-- <h1> -->
+              <a href="https://www.facebook.com/ccwaalborg/"
+                ><i class="fab fa-facebook-square"></i
+              ></a>
+              <a href="https://www.instagram.com/centralcarwash_aps/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/channel/UCL6K9SfbQXlfQC3a4-3K9Gw/featured"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="https://www.linkedin.com/company/central-carwash-aps/"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <!-- </h1> -->
+            </div>
+
+            <h6 class="mt-5">We accept</h6>
+            <div class="footer__icons-container">
+              <img src="assets/images/payment-dankort.png" alt="Dankort" />
+              <img
+                src="assets/images/payment-mastercard.png"
+                alt="MasterCard"
+              />
+              <img src="assets/images/payment-visa.png" alt="Visa" />
+            </div>
+
+            <p class="footer__copyright">All rights reserved &copy; 2020</p>
+          </div>
+
+          <div
+            class="mt-4 mt-lg-0 col-xl-2 order-lg-3 col-lg-3 order-sm-2 col-sm-6 order-2 col-12"
+          >
+            <div class="footer__section">
+              <h6>About CCW</h6>
+              <ul>
+                <li><a href="">Shop</a></li>
+                <li><a href="">Kontakt</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Abonnement og Handelsbetingelser</a></li>
+                <li><a href="">GPDR privacy policy</a></li>
+              </ul>
+            </div>
+
+            <div class="footer__section">
+              <h6>Contact</h6>
+              <p>+45 22 99 40 71</p>
+              <a href="mailto:kontakt@centralcarwash.dk"
+                >kontakt@centralcarwash.dk</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

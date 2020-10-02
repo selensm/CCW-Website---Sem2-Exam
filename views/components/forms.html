@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="../../assets/libs/bootstrap/css/bootstrap-grid.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="../../assets/libs/bootstrap/js/bootstrap.min.js"
+      defer
+    ></script>
+    <!-- Normalize -->
+    <link rel="stylesheet" href="../../assets/libs/normalize/normalize.css" />
+    <!-- FontAwesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/0f43a8f1c0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom styles and scripts -->
+    <link rel="stylesheet" href="../../assets/styles/css/main.css" />
+    <script src="../../assets/scripts/main.js" defer></script>
+    <script src="../../assets/scripts/forms.js" defer></script>
+  </head>
+  <body>
+    <!-- Template navigation -->
+    <div class="row">
+      <div class="col-12">
+        <div style="display: flex; justify-content: space-between;">
+          <a href="breadcrumbs.html">breadcrumbs</a>
+          <a href="buttons.html">buttons</a>
+          <a href="cards.html">cards</a>
+          <a href="date-picker.html">date-picker</a>
+          <a href="forms.html">forms</a>
+          <a href="typography.html">typography</a>
+        </div>
+      </div>
+    </div>
+    <!-- End of template navigation -->
+
+    <div class="container-fluid">
+      <!-- Dropdowns -->
+
+      <div class="row mt-4">
+        <div class="col-4">
+          <div class="dropdown" data-value="">
+            <div class="dropdown__title">
+              Select an option
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <ul class="dropdown__options-container hidden">
+              <li class="dropdown__option">Option 1</li>
+              <li class="dropdown__option">Option 2</li>
+              <li class="dropdown__option">Option 3</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <label for="dropdown" class="text-input__label">First name</label>
+          <div class="dropdown dropdown--dark" data-value="">
+            <div class="dropdown__title">
+              Select an option
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <ul class="dropdown__options-container hidden">
+              <li class="dropdown__option">Option 1</li>
+              <li class="dropdown__option">Option 2</li>
+              <li class="dropdown__option">Option 3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text inputs -->
+
+      <div class="row mt-4">
+        <div class="col-4">
+          <div class="text-input">
+            <label for="firstName" class="text-input__label">First name</label>
+            <input
+              type="text"
+              name=""
+              id="firstName"
+              class="text-input__input"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-6">
+          <div class="text-input">
+            <label for="address" class="text-input__label">Address</label>
+            <input type="text" name="" id="address" class="text-input__input" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Sliders -->
+
+      <div class="row mt-4">
+        <div class="col-6">
+          <input
+            type="range"
+            value="100"
+            min="0"
+            max="500"
+            name=""
+            class="slider"
+          />
+        </div>
+      </div>
+
+      <!-- Radio buttons -->
+
+      <div class="row mt-4">
+        <div class="col-6">
+          <div class="radio__group">
+            <input
+              type="radio"
+              name="radio"
+              id="radio__button--lg"
+              class="radio__input"
+            />
+            <label for="radio__button--lg" class="radio__label">
+              <span class="radio__button--lg"></span>
+              <span class="radio__button-text"> Radio large</span>
+            </label>
+          </div>
+
+          <div class="radio-group">
+            <input
+              type="radio"
+              name="radio"
+              id="radio__button--md"
+              class="radio__input"
+            />
+            <label for="radio__button--md" class="radio__label">
+              <span class="radio__button--md"> </span>
+              Radio medium
+            </label>
+          </div>
+
+          <div class="radio-group">
+            <input
+              type="radio"
+              name="radio"
+              id="radio__button--sm"
+              class="radio__input"
+            />
+            <label for="radio__button--sm" class="radio__label">
+              <span class="radio__button--sm"></span>
+              Radio small
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Checkboxes -->
+      <div class="row">
+        <div class="col-4">
+          <div class="checkbox__group">
+            <input
+              type="checkbox"
+              name=""
+              id="checkbox--lg"
+              class="checkbox__input"
+            />
+            <label for="checkbox--lg" class="checkbox__label">
+              <span class="checkbox__button--lg"></span>
+              <span class="checkbox__button-text">Checkbox large</span>
+            </label>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="checkbox__group">
+            <input
+              type="checkbox"
+              name=""
+              id="checkbox--md"
+              class="checkbox__input"
+            />
+            <label for="checkbox--md" class="checkbox__label">
+              <span class="checkbox__button--md"></span>
+              <span class="checkbox__button-text">Checkbox medium</span>
+            </label>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="checkbox__group">
+            <input
+              type="checkbox"
+              name=""
+              id="checkbox--sm"
+              class="checkbox__input"
+            />
+            <label for="checkbox--sm" class="checkbox__label">
+              <span class="checkbox__button--sm"></span>
+              <span class="checkbox__button-text">Checkbox small</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

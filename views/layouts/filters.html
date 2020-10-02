@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="../../assets/libs/bootstrap/css/bootstrap-grid.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="../../assets/libs/bootstrap/js/bootstrap.min.js"
+      defer
+    ></script>
+    <!-- Normalize -->
+    <link rel="stylesheet" href="../../assets/libs/normalize/normalize.css" />
+    <!-- FontAwesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/0f43a8f1c0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom styles and scripts -->
+    <link rel="stylesheet" href="../../assets/styles/css/main.css" />
+    <script src="../../assets/scripts/main.js" defer></script>
+    <script src="../../assets/scripts/forms.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="filters">
+        <div class="row">
+          <button
+            class="button button--base-lg button--primary-light button--filled button--tab-left filters__collapse-button--outside"
+            id="collapseFiltersButtonOutside"
+          >
+            <i class="fas fa-filter"></i>
+            Filters
+          </button>
+        </div>
+        <div class="row">
+          <div class="col-9 col-sm-7 col-md-5 col-lg-3 filters__body hidden">
+            <div class="row">
+              <div
+                class="col-12 filters__collapse-button--inside"
+                id="collapseFiltersButtonInside"
+              >
+                <p>Close filters</p>
+                <i class="fas fa-times icon--right"></i>
+              </div>
+            </div>
+
+            <div class="row mt-4 align-items-center">
+              <div class="col-6">
+                <h4>Filters</h4>
+              </div>
+              <div class="col-6">
+                <div class="checkbox__group">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="checkboxAll"
+                    class="checkbox__input"
+                  />
+                  <label for="checkboxAll" class="checkbox__label">
+                    <span class="checkbox__button--lg"></span>
+                    <span class="checkbox__button-text">Select all</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <h6>Filter by service type</h6>
+
+                <div class="checkbox__group">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="checkboxExterior"
+                    class="checkbox__input"
+                    checked
+                  />
+                  <label for="checkboxExterior" class="checkbox__label">
+                    <span class="checkbox__button--lg"></span>
+                    <span class="checkbox__button-text">Exterior cleaning</span>
+                  </label>
+                </div>
+
+                <div class="checkbox__group">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="checkboxInterior"
+                    class="checkbox__input"
+                    checked
+                  />
+                  <label for="checkboxInterior" class="checkbox__label">
+                    <span class="checkbox__button--lg"></span>
+                    <span class="checkbox__button-text">Interior cleaning</span>
+                  </label>
+                </div>
+
+                <div class="checkbox__group">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="checkboxBundles"
+                    class="checkbox__input"
+                    checked
+                  />
+                  <label for="checkboxBundles" class="checkbox__label">
+                    <span class="checkbox__button--lg"></span>
+                    <span class="checkbox__button-text">Bundles</span>
+                  </label>
+                </div>
+
+                <div class="checkbox__group">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="checkboxMemberships"
+                    class="checkbox__input"
+                    checked
+                  />
+                  <label for="checkboxMemberships" class="checkbox__label">
+                    <span class="checkbox__button--lg"></span>
+                    <span class="checkbox__button-text">Memberships</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-12">
+                <h6>Filter by membership</h6>
+
+                <div class="checkbox__group">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="checkboxBronze"
+                    class="checkbox__input"
+                  />
+                  <label for="checkboxBronze" class="checkbox__label">
+                    <span class="checkbox__button--lg"></span>
+                    <span class="checkbox__button-text">Bronze</span>
+                  </label>
+                </div>
+
+                <div class="checkbox__group">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="checkboxSilver"
+                    class="checkbox__input"
+                  />
+                  <label for="checkboxSilver" class="checkbox__label">
+                    <span class="checkbox__button--lg"></span>
+                    <span class="checkbox__button-text">Silver</span>
+                  </label>
+                </div>
+
+                <div class="checkbox__group">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="checkboxGold"
+                    class="checkbox__input"
+                  />
+                  <label for="checkboxGold" class="checkbox__label">
+                    <span class="checkbox__button--lg"></span>
+                    <span class="checkbox__button-text">Gold</span>
+                  </label>
+                </div>
+
+                <div class="checkbox__group">
+                  <input
+                    type="checkbox"
+                    name=""
+                    id="checkboxPlatinum"
+                    class="checkbox__input"
+                  />
+                  <label for="checkboxPlatinum" class="checkbox__label">
+                    <span class="checkbox__button--lg"></span>
+                    <span class="checkbox__button-text">Platinum</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mb-4">
+              <div class="col-12">
+                <h6>Filter by price</h6>
+                <div class="slider__label">
+                  <p>300DKK</p>
+                  <p>1200DKK</p>
+                </div>
+
+                <input
+                  type="range"
+                  value="1200"
+                  min="300"
+                  max="1200"
+                  name=""
+                  class="slider"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

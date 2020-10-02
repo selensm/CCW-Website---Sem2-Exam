@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="../../assets/libs/bootstrap/css/bootstrap-grid.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="../../assets/libs/bootstrap/js/bootstrap.min.js"
+      defer
+    ></script>
+    <!-- Normalize -->
+    <link rel="stylesheet" href="../../assets/libs/normalize/normalize.css" />
+    <!-- FontAwesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/0f43a8f1c0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom styles and scripts -->
+    <link rel="stylesheet" href="../../assets/styles/css/main.css" />
+    <script src="../../assets/scripts/main.js" defer></script>
+    <script src="../../assets/scripts/forms.js" defer></script>
+    <script src="../../assets/scripts/date-picker.js" defer></script>
+  </head>
+
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <div class="row">
+          <div class="nav__logo-container col-3">
+            <a href="" class="nav__logo"></a>
+          </div>
+
+          <div class="col-6">
+            <ul class="nav__links-container">
+              <li class="nav__link active"><a href="">Home</a></li>
+              <li class="nav__link"><a href="">Memberships</a></li>
+              <li class="nav__link"><a href="">Shop</a></li>
+              <li class="nav__link"><a href="">The&nbsp;company</a></li>
+              <li class="nav__link"><a href="">Contact&nbsp;us</a></li>
+            </ul>
+          </div>
+
+          <div class="nav__buttons col-3">
+            <i class="fas fa-shopping-cart nav__shopping-cart"></i>
+            <button
+              class="nav__login button button--base-sm button--primary-light"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="content">
+      <div class="container checkout pt-5">
+        <div class="row">
+          <div class="col-12 col-lg-8">
+            <div
+              class="row card process-steps process-steps process-steps--small"
+            >
+              <!-- <div class=""> -->
+              <div class="col-3 process-steps__step" data-step="1">
+                <i class="far fa-calendar"></i>
+                <div class="process-steps__step-text">
+                  <h6 class="process-steps__step-title">
+                    Book your appointment
+                  </h6>
+                  <p class="process-steps__step-description">
+                    Book a date and time for your appointment
+                  </p>
+                </div>
+              </div>
+              <div class="col-3 process-steps__step" data-step="2">
+                <i class="fas fa-user process-steps__step-icon"></i>
+                <div class="process-steps__step-text">
+                  <h6 class="process-steps__step-title">
+                    Personal information
+                  </h6>
+                  <p class="process-steps__step-description">
+                    Fill in your personal information to complete the booking
+                    process.
+                  </p>
+                </div>
+              </div>
+              <div class="col-3 process-steps__step" data-step="3">
+                <i class="fas fa-car"></i>
+                <div class="process-steps__step-text">
+                  <h6 class="process-steps__step-title">Car information</h6>
+                  <p class="process-steps__step-description">
+                    Fill in your car information to complete the booking
+                    process.
+                  </p>
+                </div>
+              </div>
+              <div class="col-3 process-steps__step" data-step="4">
+                <i class="far fa-credit-card"></i>
+                <div class="process-steps__step-text">
+                  <h6 class="process-steps__step-title">Complete purchase</h6>
+                  <p class="process-steps__step-description">
+                    Enter your credit card information to complete the booking
+                    process.
+                  </p>
+                </div>
+              </div>
+              <!-- </div> -->
+            </div>
+            <div class="row">
+              <div class="col-6 text-input mr-5">
+                <label for="licensePlateNumber" class="text-input__label"
+                  >License plate number</label
+                >
+                <input
+                  type="text"
+                  name=""
+                  id="licensePlateNumber"
+                  class="text-input__input"
+                />
+              </div>
+              <div class="col-6 text-input mr-5">
+                <label for="carBrand" class="text-input__label"
+                  >Car brand</label
+                >
+                <input
+                  type="text"
+                  name=""
+                  id="carBrand"
+                  class="text-input__input"
+                />
+              </div>
+              <div class="col-6 text-input mr-5">
+                <label for="carModel" class="text-input__label"
+                  >Car model</label
+                >
+                <input
+                  type="text"
+                  name=""
+                  id="carModel"
+                  class="text-input__input"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card checkout-card">
+              <div class="checkout-card__item">
+                <p class="checkout-card__item-name">Item 1</p>
+                <p class="checkout-card__item-price">10 dolers</p>
+              </div>
+
+              <div class="checkout-card__item">
+                <p class="checkout-card__item-name">Item 1</p>
+                <p class="checkout-card__item-price">10 dolers</p>
+              </div>
+
+              <div class="checkout-card__item">
+                <p class="checkout-card__item-name">Item 1</p>
+                <p class="checkout-card__item-price">10 dolers</p>
+              </div>
+              <!-- 
+              <div class="checkout-card__coupon">
+                <p class="checkout-card__coupon-label">Coupon</p>
+
+                <input
+                  type="text"
+                  name=""
+                  id="firstName"
+                  class="checkout-card__coupon-input text-input__input"
+                />
+              </div> -->
+
+              <div class="checkout-card__total">
+                <h6>Total:</h6>
+                <h6 class="checkout-card__total-price">700</h6>
+              </div>
+
+              <div class="checkout-card__buttons">
+                <button
+                  class="checkout-card__button button button--base-lg button--primary-light button--filled"
+                >
+                  Proceed to checkout
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

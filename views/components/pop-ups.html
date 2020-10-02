@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="../../assets/libs/bootstrap/css/bootstrap-grid.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="../../assets/libs/bootstrap/js/bootstrap.min.js"
+      defer
+    ></script>
+    <!-- Normalize -->
+    <link rel="stylesheet" href="../../assets/libs/normalize/normalize.css" />
+    <!-- FontAwesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/0f43a8f1c0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom styles and scripts -->
+    <link rel="stylesheet" href="../../assets/styles/css/main.css" />
+    <script src="../../assets/scripts/main.js" defer></script>
+  </head>
+  <body>
+    <!-- Template navigation -->
+    <div class="row">
+      <div class="col-12">
+        <div style="display: flex; justify-content: space-between;">
+          <a href="breadcrumbs.html">breadcrumbs</a>
+          <a href="buttons.html">buttons</a>
+          <a href="cards.html">cards</a>
+          <a href="date-picker.html">date-picker</a>
+          <a href="forms.html">forms</a>
+          <a href="typography.html">typography</a>
+        </div>
+      </div>
+    </div>
+    <!-- End of template navigation -->
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-10 col-lg-6">
+          <div class="pop-up pop-up--confirmation">
+              <div class="pop-up__text-container">
+                <h5 class="pop-up__title">
+                    Are you sure you want to remove all items?
+                  </h5>
+                  <p class="pop-up__descritption">This is what may happen if you continue.</p>
+              </div>
+
+              <div class="pop-up__buttons-container">
+                <button class="pop-up__button--confirm button button--base-lg button--secondary">
+                    Yes, continue
+                   </button>
+                   <button class="pop-up__button--cancel button button--base-lg button--warning button--filled">
+                   Cancel
+                   </button>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4 pop-up__container">
+          <div class="pop-up pop-up--account-log-in">
+            <a class="pop-up__close-button" href="">
+              Close
+              <i class="pop-up__close-button-x fas fa-times icon--right"></i
+            ></a>
+            <h5 class="pop-up__title--sign-up">
+              Would you like to create an account first?
+            </h5>
+
+            <h5 class="pop-up__title--log-in">
+                Log in to your account
+                     </h5>
+            <form action="">
+              <div class="pop-up__input text-input">
+                <label for="email" class="text-input__label">Email</label>
+                <input
+                  type="email"
+                  name=""
+                  id="email"
+                  class="text-input__input"
+                />
+              </div>
+
+              <div class="pop-up__input text-input">
+                <label for="password" class="text-input__label">Password</label>
+                <input
+                  type="password"
+                  name=""
+                  id="password"
+                  class="text-input__input"
+                />
+              </div>
+
+              <div class="checkbox__group">
+                <input
+                  type="checkbox"
+                  name=""
+                  id="remember"
+                  class="checkbox__input"
+                />
+                <label for="remember" class="checkbox__label">
+                  <span class="checkbox__button--sm"></span>
+                  <span class="checkbox__button-text">Remember me</span>
+                </label>
+              </div>
+
+              <div class="checkbox__group">
+                <input
+                  type="checkbox"
+                  name=""
+                  id="acceptTC"
+                  class="checkbox__input"
+                />
+                <label for="acceptTC" class="checkbox__label">
+                  <span class="checkbox__button--sm"></span>
+                  <span class="checkbox__button-text"
+                    >Accept Terms and conditions</span
+                  >
+                </label>
+              </div>
+              <button
+                class="pop-up__button--sign-up button button--base-lg button--secondary"
+              >
+                Sign up
+              </button>
+              <button
+                class="pop-up__button--log-in button button--base-lg button--secondary"
+              >
+                Log in
+              </button>
+            </form>
+
+            <p class="pop-up__form-switch--sign-up">
+              Have an account?
+              <a class="pop-up__form-switch-link" href="">Log in</a>
+            </p>
+            <p class="pop-up__form-switch--log-in">
+              Don't have an account?
+              <a class="pop-up__form-switch-link" href="">Sign-up</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-4">
+            <div class="pop-up pop-up--account-sign-up">
+                <a class="pop-up__close-button" href="">
+                  Close
+                  <i class="pop-up__close-button-x fas fa-times icon--right"></i
+                ></a>
+                <h5 class="pop-up__title--sign-up">
+                  Would you like to create an account first?
+                  <br> /<br>
+                  You need to create an account to purchase a membership.
+                </h5>
+                <h5 class="pop-up__title--log-in">
+                     Log in to your account
+                  </h5>
+                <form action="">
+                  <div class="pop-up__input text-input">
+                    <label for="email" class="text-input__label">Email</label>
+                    <input
+                      type="email"
+                      name=""
+                      id="email"
+                      class="text-input__input"
+                    />
+                  </div>
+    
+                  <div class="pop-up__input text-input">
+                    <label for="password" class="text-input__label">Password</label>
+                    <input
+                      type="password"
+                      name=""
+                      id="password"
+                      class="text-input__input"
+                    />
+                  </div>
+    
+                  <div class="checkbox__group">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="remember"
+                      class="checkbox__input"
+                    />
+                    <label for="remember" class="checkbox__label">
+                      <span class="checkbox__button--sm"></span>
+                      <span class="checkbox__button-text">Remember me</span>
+                    </label>
+                  </div>
+    
+                  <div class="checkbox__group">
+                    <input
+                      type="checkbox"
+                      name=""
+                      id="acceptTC"
+                      class="checkbox__input"
+                    />
+                    <label for="acceptTC" class="checkbox__label">
+                      <span class="checkbox__button--sm"></span>
+                      <span class="checkbox__button-text"
+                        >Accept Terms and conditions</span
+                      >
+                    </label>
+                  </div>
+                  <button
+                    class="pop-up__button--sign-up button button--base-lg button--secondary"
+                  >
+                    Sign up
+                  </button>
+                  <button
+                    class="pop-up__button--log-in button button--base-lg button--secondary"
+                  >
+                    Log in
+                  </button>
+                </form>
+    
+                <p class="pop-up__form-switch--sign-up">
+                  Have an account?
+                  <a class="pop-up__form-switch-link" href="">Log in</a>
+                </p>
+                <p class="pop-up__form-switch--log-in">
+                  Don't have an account?
+                  <a class="pop-up__form-switch-link" href="">Sign-up</a>
+                </p>
+              </div>
+      </div>
+    </div>
+    <!-- <div class="pop-up__container">
+        <div class="pop-up pop-up--confirmation">
+            <div class="pop-up__text-container">
+              <h5 class="pop-up__title">
+                  Are you sure you want to remove all items?
+                </h5>
+                <p class="pop-up__descritption">This is what may happen if you continue.</p>
+            </div>
+
+            <div class="pop-up__buttons-container">
+              <button class="pop-up__button--confirm button button--base-lg button--secondary">
+                  Yes, continue
+                 </button>
+                 <button class="pop-up__button--cancel button button--base-lg button--warning button--filled">
+                 Cancel
+                 </button>
+            </div>
+        </div>
+      </div> -->
+  </body>
+</html>

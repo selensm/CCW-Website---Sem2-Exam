@@ -1,0 +1,281 @@
+.main-homepage {
+  &:after {
+    @include bubbles-after;
+  }
+
+  &:before {
+    @include bubbles-before;
+  }
+
+  overflow-x: hidden;
+  &__banner {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    &-video {
+      min-height: 100%;
+      position: absolute;
+      z-index: -1;
+    }
+
+    &-container {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      background-color: rgba($background-dark, 0.5);
+
+      // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      // clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
+      -webkit-clip-path: polygon(0 20%, 100% 40%, 100% 100%, 0% 100%);
+      clip-path: polygon(0 20%, 100% 40%, 100% 100%, 0% 100%);
+
+      @media (min-width: $media-sm) {
+        -webkit-clip-path: polygon(0 30%, 100% 50%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 30%, 100% 50%, 100% 100%, 0% 100%);
+      }
+
+      @media (min-width: $media-md) {
+        -webkit-clip-path: polygon(0 0, 50% 0, 70% 100%, 0 100%);
+        clip-path: polygon(0 0, 50% 0, 70% 100%, 0 100%);
+      }
+
+      @media (min-width: $media-lg) {
+        -webkit-clip-path: polygon(0 0, 40% 0, 60% 100%, 0 100%);
+        clip-path: polygon(0 0, 40% 0, 60% 100%, 0 100%);
+        // clip-path: polygon(0 30%, 60% 30%, 60% 70%, 0 70%);
+      }
+
+      -webkit-backdrop-filter: blur(10px);
+
+      backdrop-filter: blur(10px);
+      // top: -100%;
+      // transform: translateY(50%);
+
+      p {
+        color: $text-light;
+        // font-size: $p * 1.125;
+      }
+    }
+
+    &-text {
+      h1 {
+        // font-size: $h1 * 0.8;
+        @media (min-width: $media-lg) {
+          max-width: 70%;
+        }
+      }
+
+      p {
+        @media (min-width: $media-lg) {
+          max-width: 70%;
+        }
+      }
+
+      position: relative;
+      // top: 75%;
+      width: 100%;
+      transform: translateY(100%);
+
+      display: flex;
+      flex-direction: column;
+      color: $white;
+
+      @media (min-width: $media-sm) {
+        // top: 75%;
+      }
+      @media (min-width: $media-md) {
+        // top: 50%;
+      }
+    }
+  }
+
+  &__memberships {
+    &__cards {
+      overflow-x: auto;
+    }
+    padding: 4rem 0;
+    &-text {
+      text-align: center;
+    }
+  }
+
+  &__company {
+    background-image: url(../../images/photos/homepage-company.jpg);
+    @include bckg-img;
+    padding: 0;
+
+    &-text {
+      -webkit-backdrop-filter: blur(10px);
+      // backdrop-filter: blur(14px) brightness(64%);
+      backdrop-filter: blur(10px);
+      color: $text-light;
+
+      background-color: rgba($background-dark, 0.5);
+
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      padding: 10rem 0;
+
+      p {
+        color: $text-light;
+        // font-size: $p * 1.125;
+      }
+
+      @media (min-width: $media-md) {
+        // clip-path: polygon(70% 0, 100% 0, 100% 100%, 50% 100%);
+        -webkit-clip-path: polygon(50% 0, 100% 0, 100% 100%, 30% 100%);
+        clip-path: polygon(50% 0, 100% 0, 100% 100%, 30% 100%);
+      }
+
+      @media (min-width: $media-lg) {
+        -webkit-clip-path: polygon(50% 0, 100% 0, 100% 100%, 30% 100%);
+        clip-path: polygon(50% 0, 100% 0, 100% 100%, 30% 100%);
+        padding: 0;
+      }
+
+      -webkit-backdrop-filter: blur(5px) brightness(64%);
+
+      backdrop-filter: blur(5px) brightness(64%);
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  &__services {
+    padding: 4rem 0;
+    &__cards {
+      padding: 4rem 0;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+
+    &-text {
+      text-align: center;
+    }
+  }
+
+  &__signup {
+    padding: 4rem 0;
+    &-text {
+    }
+    &-devices {
+      background-image: url(../../images/photos/mock-up-devices.png);
+      @include bckg-img;
+      background-size: contain;
+    }
+  }
+
+  &__steps {
+    padding: 4rem 0;
+    text-align: center;
+    color: $text-light;
+    background-color: $primary-light;
+
+    p {
+      color: $text-light;
+    }
+
+    &-container {
+      .main-homepage__steps-step {
+        &.hidden {
+          opacity: 0;
+        }
+
+        &.showStep {
+          -webkit-animation-name: showStep;
+          animation-name: showStep;
+          -webkit-animation-duration: $slow;
+          animation-duration: $slow;
+        }
+      }
+    }
+
+    i {
+      font-size: 10rem;
+    }
+  }
+
+  &__testimonials {
+    &__cards {
+      overflow-x: auto;
+    }
+    padding: 4rem 0;
+    &-avatar {
+      @include bckg-img;
+      background-size: contain;
+      border-radius: 100%;
+      padding: 4rem;
+      display: inline-block;
+      width: 0;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .gitte {
+      background-image: url(../../images/photos/gitte.png);
+    }
+
+    .mathias {
+      background-image: url(../../images/photos/mathias.png);
+    }
+
+    .claus {
+      background-image: url(../../images/photos/claus.png);
+    }
+
+    &-text {
+      padding: $padding-sm;
+      .trustpilot {
+        @include bckg-img;
+        padding: 0.1rem 6.4rem;
+        background-image: url(../../images/photos/trustpilot.png);
+      }
+    }
+  }
+
+  &__media {
+    &__medias {
+      overflow-x: auto;
+    }
+    padding: 4rem 0;
+    background-color: $primary-light;
+    color: $white;
+
+    &-text {
+      text-align: center;
+    }
+
+    &-images {
+      * {
+        @include bckg-img;
+        background-size: contain;
+        padding: 2rem;
+      }
+
+      .migog {
+        background-image: url(../../images/photos/migogaalborg.png);
+      }
+
+      .tv2nord {
+        background-image: url(../../images/photos/tv2-nord.png);
+      }
+
+      .nord24 {
+        background-image: url(../../images/photos/24-nord.png);
+      }
+
+      .nord {
+        background-image: url(../../images/photos/nordjyske.png);
+      }
+
+      .aalborgnu {
+        background-image: url(../../images/photos/aalborg-nu.png);
+      }
+    }
+  }
+}

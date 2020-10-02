@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Central Car Wash is a company that started small, grew fast and is still growing! We offer great memberships at low prices, professional care for your car, various services and your own online platform to control everything from anywhere!"
+    />
+    <title>The company | CCW</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+    <!-- Bootstrap grid CSS, from https://getbootstrap.com/, released under the MIT license and is copyright 2018 Twitter -->
+    <link
+      rel="stylesheet"
+      href="assets/libs/bootstrap/css/bootstrap-grid.min.css"
+    />
+    <!-- Normalize, from https://necolas.github.io/normalize.css/, licensed under the MIT license -->
+    <link rel="stylesheet" href="assets/libs/normalize/normalize.css" />
+    <!-- Font Awesome Free CDN, from https://fontawesome.com/, licensed under CC BY 4.0 license -->
+    <script
+      src="https://kit.fontawesome.com/0f43a8f1c0.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Custom styles and scripts -->
+    <link rel="stylesheet" href="assets/styles/css/main.css" />
+    <script src="assets/scripts/main.js" defer></script>
+  </head>
+
+  <body id="company">
+    <nav class="nav">
+      <div class="container">
+        <div class="row">
+          <div
+            class="nav__logo-container col-12 col-lg-3 col-xl-3 justify-content-between"
+          >
+            <div class="row">
+              <a href="index.html" class="nav__logo col-6"></a>
+              <div class="nav__hamburger-container d-xl-none d-lg-none col-6">
+                <div class="nav__hamburger">
+                  <span class="line"></span>
+                  <span class="line"></span>
+                  <span class="line"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-12 col-lg-6 col-xl-6 mt-5 mt-lg-0 hidden"
+            id="links-container"
+          >
+            <ul class="nav__links-container">
+              <li class="nav__link"><a href="index.html">Home</a></li>
+              <li class="nav__link">
+                <a href="memberships.html">Memberships</a>
+              </li>
+              <li class="nav__link"><a href="shop.html">Shop</a></li>
+              <li class="nav__link active">
+                <a href="company.html">The&nbsp;company</a>
+              </li>
+              <li class="nav__link">
+                <a href="contact.html">Contact&nbsp;us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="nav__buttons col-12 col-lg-3 col-xl-3 my-5 my-lg-0 hidden"
+            id="buttons-container"
+          >
+            <a
+              href="shopping_cart.html"
+              class="button button--base-sm button--primary-light button--filled d-lg-none d-xl-none"
+            >
+              <i
+                class="fas fa-shopping-cart nav__shopping-cart nav__shopping-cart--mobile"
+              ></i
+              >Shopping&nbsp;cart
+            </a>
+            <a href="shopping_cart.html">
+              <i
+                class="fas fa-shopping-cart nav__shopping-cart nav__shopping-cart--desktop d-none d-lg-block"
+                ><span id="totalCartAmountDot"></span
+              ></i>
+            </a>
+            <button
+              class="nav__login button button--base-sm button--primary-light"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="main-company content">
+      <section class="main-company__intro">
+        <div class="container">
+          <div
+            class="main-company__intro__banner row justify-content-md-between align-items-center"
+          >
+            <div class="main-company__intro__banner-message col-md-5 col-lg-4">
+              <h1>We care about your car just as much as you do</h1>
+            </div>
+            <div class="main-company__intro__banner-image-container col-md-7">
+              <div class="main-company__intro__banner-image"></div>
+            </div>
+          </div>
+          <div
+            class="main-company__intro__benefits row justify-content-lg-between"
+          >
+            <article class="col-sm-7 col-md-7 col-lg-3">
+              <div>
+                <h4>Professional care</h4>
+                <p>
+                  The employees at CCW are professionals who will make sure your
+                  car gets all the care it needs and deserves.
+                </p>
+              </div>
+            </article>
+            <article class="col-sm-7 col-md-7 col-lg-3">
+              <div>
+                <h4>Attention to detail</h4>
+                <p>
+                  Our job is to take care of your car better than machines or
+                  even you could. At CCW we are detail - oriented and we clean
+                  even the smallest corners.
+                </p>
+              </div>
+            </article>
+            <article class="col-sm-7 col-md-7 col-lg-3">
+              <div>
+                <h4>Always growing</h4>
+                <p>
+                  As a company, we are always striving towards growth. CCW is
+                  coming to your town soon!
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-company__founders">
+        <div class="container">
+          <div class="row justify-content-center">
+            <h2 class="col-12">The minds behind the company</h2>
+          </div>
+          <div
+            class="row my-5 justify-content-md-center justify-content-lg-between"
+          >
+            <div
+              class="order-3 my-4 col-md-6 order-md-2 col-lg-4 order-lg-1 col-xl-3"
+            >
+              <article class="main-company__founders-radu">
+                <h4>Radu</h4>
+                <p>
+                  Born at 1987 in Moldova, Radu has over 10 years of experience
+                  in the car care industry. He came to Denmark in 2015 and he is
+                  also an Aalborg University graduate.
+                </p>
+                <p>
+                  With his detail-oriented approach, Radu ensures that all
+                  employees can deliver top quality service to CCW’s customers.
+                </p>
+              </article>
+            </div>
+            <div
+              class="main-company__founders-the_guys-container order-1 my-4 col-md-7 order-md-1 col-lg-4 order-lg-2 col-xl-4"
+            >
+              <div class="main-company__founders-the_guys"></div>
+            </div>
+
+            <div
+              class="order-2 my-4 col-md-6 order-md-3 col-lg-4 order-lg-3 col-xl-3"
+            >
+              <article class="main-company__founders-damir">
+                <h4>Damir</h4>
+                <h6>Founder</h6>
+                <p>
+                  Damir is the founder of CCW, born in 1988 in the former
+                  Yugoslavia.
+                </p>
+                <p>
+                  He came to Denmark at 4-years-old and he is an Aalborg
+                  University graduate who worked as a business consultant for 4
+                  years before committing to CCW full time.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-company__story">
+        <div class="container">
+          <div class="row justify-content-lg-between main-company__story-start">
+            <div
+              class="main-company__story-start-image-container d-none d-lg-block col-lg-6 order-lg-2"
+            >
+              <div class="main-company__story-start-image"></div>
+            </div>
+
+            <article
+              class="col-12 col-lg-6 col-xl-5 main-company__story-start-text"
+            >
+              <h4>How we got to where we are today...</h4>
+              <!-- <div class="main-company__story-start-text-image-container"></div> -->
+              <div
+                class="d-lg-none main-company__story-start-image main-company__story-start-text-image"
+              ></div>
+              <p>
+                CCW started back in 2015 as a traditional car wash center based
+                in Aalborg. Soon enough a group of loyal customers who would
+                return for more of our services was formed, which encouraged us
+                to set up a car wash based on subscription so that we could
+                provide our loyal customers what they need on a reasonable
+                price.
+              </p>
+            </article>
+          </div>
+          <div class="row justify-content-lg-between main-company__story-now">
+            <div
+              class="main-company__story-now-image-container d-none d-lg-block col-lg-6"
+            >
+              <div class="main-company__story-now-image"></div>
+            </div>
+
+            <article
+              class="col-12 col-lg-6 col-xl-5 main-company__story-now-text"
+            >
+              <h4>… and now we are only growing bigger!</h4>
+              <div
+                class="d-lg-none col-lg-6 main-company__story-now-image main-company__story-now-text-image"
+              ></div>
+              <p>
+                In 2019 our subscription packages became so popular that we had
+                to find a new and larger workshop and CCW moved to it’s current
+                location. The same year we decided to expand our company and
+                reach more people in Denmark, so we opened gates for the
+                citizens of Aarhus.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-company__testimonials">
+        <div class="container">
+          <div class="row my-5 justify-content-center">
+            <article>
+              <h3>Our customers say...</h3>
+            </article>
+          </div>
+          <div
+            class="row flex-nowrap main-company__testimonials__cards justify-content-lg-center"
+          >
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+              <div class="main-company__testimonials-avatar gitte"></div>
+              <div class="card">
+                <div class="main-company__testimonials-text">
+                  <h5>MIN BIL HAVDE SIN FØRSTE TID I DAG OG…</h5>
+                  <p>
+                    Min bil havde sin første tid i dag og hold op jeg er meget
+                    tilfreds..
+                  </p>
+                  <p>
+                    Selv min mand som ellers var noget skeptisk måtte erkende at
+                    de havde gjort et super fint stykke arbejde..
+                  </p>
+                  <p>
+                    Har allerede bestilt næste tid..
+                  </p>
+                  <h6>Gitte Pihl</h6>
+                  <a
+                    class="trustpilot"
+                    href="https://dk.trustpilot.com/reviews/5bd76be89d37800ae465dd24"
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+              <div class="main-company__testimonials-avatar mathias"></div>
+              <div class="card">
+                <div class="main-company__testimonials-text">
+                  <h5>FLOT ARBEJDE!</h5>
+                  <p>
+                    Lækkert at kunne efterlade bilen og gå over og handle ind,
+                    imens bilen rengøres og en time efter kommer du tilbage til
+                    en bil der både skinner og dufter af ny bil. Kan varmt
+                    anbefales :-)
+                  </p>
+                  <h6>
+                    Mathias H. Schjøtt
+                  </h6>
+                  <a
+                    class="trustpilot"
+                    href="https://dk.trustpilot.com/reviews/5bcb54b69d378004f020460c"
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+              <div class="main-company__testimonials-avatar claus"></div>
+              <div class="card">
+                <div class="main-company__testimonials-text">
+                  <h5>TAK FOR EN SUPER GOD VASK OG SUPER SERVICE</h5>
+                  <p>
+                    Tak for en super god vask og super service - de søde
+                    medarbejdere gjorde opmærksom på at mine lædersæder var i
+                    farezonen for at revne på grund af barnesædet - løsningen
+                    var at få en måtte monteret under barnesædet... Tusind tak
+                    for tip og god behandling.
+                  </p>
+                  <h6>Claus Wimmer-Aune</h6>
+                  <a
+                    class="trustpilot"
+                    href="https://dk.trustpilot.com/reviews/5b93770f8c83fd0b58d58038"
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-company__media">
+        <div class="container">
+          <div class="row justify-content-center">
+            <article class="main-company__media-text">
+              <h3>We are discussed in the following media</h3>
+            </article>
+          </div>
+          <div
+            class="row flex-nowrap main-company__media__medias my-4 justify-content-lg-center main-company__media-images"
+          >
+            <div class="col-4 col-lg-2 col-xl-2">
+              <div class="migog"></div>
+            </div>
+            <div class="col-4 col-lg-2 col-xl-2">
+              <div class="tv2nord"></div>
+            </div>
+            <div class="col-4 col-lg-2 col-xl-2">
+              <div class="nord24"></div>
+            </div>
+            <div class="col-4 col-lg-2 col-xl-2">
+              <div class="nord"></div>
+            </div>
+            <div class="col-4 col-lg-2 col-xl-2">
+              <div class="aalborgnu"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div
+            class="mt-4 mt-lg-0 col-xl-3 order-lg-1 col-lg-4 order-sm-1 col-sm-6 order-1 col-12"
+          >
+            <div class="footer__section">
+              <h6>Opening times</h6>
+              <p>Mon - Sat: 09:00 – 17:00</p>
+              <p>Sunday: Closed</p>
+            </div>
+
+            <div class="footer__section">
+              <h6>Aarhus</h6>
+              <p>Anelystparken 37a</p>
+              <p>8381 Tilst</p>
+            </div>
+
+            <div class="footer__section">
+              <h6>Aalborg</h6>
+              <p>K. Christensens Vej 2D</p>
+              <p>9200 Aalborg</p>
+            </div>
+          </div>
+
+          <div
+            class="mt-4 mt-lg-0 col-xl-6 order-lg-2 col-lg-4 order-sm-3 col-sm-12 order-3 col-12 footer__center"
+          >
+            <h6>Subscribe to our newsletter!</h6>
+            <input
+              type="text"
+              name="newsletter"
+              placeholder="E-mail"
+              id="newsletter"
+              class="text-input__input"
+            />
+            <button
+              class="button button--base-sm button--secondary button--filled"
+            >
+              Subscribe
+            </button>
+            <div class="footer__icons-container">
+              <!-- <h1> -->
+              <a href="https://www.facebook.com/ccwaalborg/"
+                ><i class="fab fa-facebook-square"></i
+              ></a>
+              <a href="https://www.instagram.com/centralcarwash_aps/"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/channel/UCL6K9SfbQXlfQC3a4-3K9Gw/featured"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="https://www.linkedin.com/company/central-carwash-aps/"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <!-- </h1> -->
+            </div>
+
+            <h6 class="mt-5">We accept</h6>
+            <div class="footer__icons-container">
+              <img src="assets/images/payment-dankort.png" alt="Dankort" />
+              <img
+                src="assets/images/payment-mastercard.png"
+                alt="MasterCard"
+              />
+              <img src="assets/images/payment-visa.png" alt="Visa" />
+            </div>
+
+            <p class="footer__copyright">All rights reserved &copy; 2020</p>
+          </div>
+
+          <div
+            class="mt-4 mt-lg-0 col-xl-3 order-lg-3 col-lg-4 order-sm-2 col-sm-6 order-2 col-12"
+          >
+            <div class="footer__section">
+              <h6>About CCW</h6>
+              <ul>
+                <li><a href="">Shop</a></li>
+                <li><a href="">Kontakt</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Abonnement og Handelsbetingelser</a></li>
+                <li><a href="">GPDR privacy policy</a></li>
+              </ul>
+            </div>
+
+            <div class="footer__section">
+              <h6>Contact</h6>
+              <p>+45 22 99 40 71</p>
+              <a href="mailto:kontakt@centralcarwash.dk"
+                >kontakt@centralcarwash.dk</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+.notification {
+  width: calc(100% - 4rem);
+
+  @media (min-width: $media-md) {
+    width: 75%;
+  }
+
+  @media (min-width: $media-lg) {
+    width: 50%;
+  }
+
+  background-color: $white;
+  @include border-round-lg;
+  @include drop-shadow-light-sm;
+  overflow: hidden;
+  margin-bottom: 4rem;
+  display: flex;
+  position: fixed;
+  right: 2rem;
+  bottom: 1rem;
+  z-index: 9999;
+
+  -webkit-animation-name: moveInRight;
+
+  animation-name: moveInRight;
+  -webkit-animation-duration: $fast;
+  animation-duration: $fast;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+
+  transition: transform $very-fast ease-out;
+  transition: opacity $medium ease-out;
+  padding: $padding-md;
+  border: 2px solid;
+
+  &.fade-out {
+    opacity: 0;
+  }
+
+  &__close-button {
+    position: absolute;
+    color: $greyed-out;
+    font-size: 125%;
+    padding: 2rem;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+  }
+
+  &__icon {
+    display: none;
+    padding-right: 4rem;
+
+    i {
+      font-size: 6rem;
+      display: none;
+    }
+  }
+
+  &--icon {
+    .notification__icon {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &--sm {
+    padding: $padding-sm;
+
+    .notification__close-button {
+      padding: 2rem;
+    }
+
+    .notification__icon {
+      padding-right: 2rem;
+
+      i {
+        font-size: 4rem;
+      }
+    }
+
+    .notification__title {
+      margin: 0;
+    }
+
+    .notification__description {
+      margin: 0;
+    }
+  }
+
+  &--warning {
+    border-color: $warning;
+
+    .icon--warning {
+      display: inline-block;
+      color: $warning;
+    }
+  }
+
+  &--new {
+    border-color: $new;
+
+    .icon--new {
+      display: inline-block;
+      color: $new;
+    }
+  }
+
+  &--success {
+    border-color: $success;
+
+    .icon--success {
+      display: inline-block;
+      color: $success;
+    }
+  }
+  &--alert {
+    border-color: $alert;
+
+    .icon--alert {
+      display: inline-block;
+      color: $alert;
+    }
+  }
+}
